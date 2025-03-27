@@ -15,8 +15,8 @@ use memory_addr::VirtAddrRange;
 use spin::Once;
 
 use crate::{
+    copy_from_kernel,
     ctypes::{CloneFlags, TimeStat, WaitStatus},
-    init_user_aspace,
     signal::SignalManager,
 };
 use axhal::{
@@ -113,7 +113,7 @@ impl TaskExt {
         let current_task = current();
         let mut current_aspace = current_task.task_ext().aspace.lock();
         let mut new_aspace = current_aspace.clone_or_err()?;
-        init_user_aspace(&mut new_aspace)?;
+        copy_from_kernel(&mut new_aspace)?;
         new_task
             .ctx_mut()
             .set_page_table_root(new_aspace.page_table_root());
