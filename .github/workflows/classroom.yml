@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Starry-OS/starry-next
-          ref: 1726011e88ff076b7e5fcf545deda553e74ec579
+          ref: 24fc43f870436657fbf970c88995b88b9ca79fca
           path: starry-next
       - name: Run testcases
         run: |
