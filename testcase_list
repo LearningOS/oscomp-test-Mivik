@@ -16,6 +16,6 @@
 /musl/busybox echo "#### OS COMP TEST GROUP END libctest-glibc ####"
 /musl/busybox echo "#### OS COMP TEST GROUP END libctest-musl ####"
 
-/musl/busybox echo "#### OS COMP TEST GROUP START lua-musl ####"
+/musl/busybox echo "#### OS COMP TEST GROUP START lua-glibc ####"
 /musl/lua_testcode.sh
-/musl/busybox echo "#### OS COMP TEST GROUP END lua-musl ####"
+/musl/busybox echo "#### OS COMP TEST GROUP END lua-glibc ####"
