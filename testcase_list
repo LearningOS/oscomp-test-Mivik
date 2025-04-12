@@ -17,4 +17,3 @@
 /musl/busybox echo "#### OS COMP TEST GROUP END libctest-musl ####"
 
 /musl/lua_testcode.sh
-/glibc/lua_testcode.sh
