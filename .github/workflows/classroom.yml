@@ -49,8 +49,8 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          repository: Starry-OS/starry-next
-          ref: 8efa994f7fb2f793ae3d53a1ad0d48fa163f37b3
+          repository: Mivik/starry-next
+          ref: 2b02be93ce5ed05185dd2d0a07706b4dda63f0a9
           path: starry-next
       - name: Run testcases
         run: |
@@ -59,7 +59,7 @@ jobs:
           cd starry-next
 
           echo "Cloning repositories ..." || true
-          git clone https://github.com/Starry-OS/arceos -b tls .arceos --depth=1 || true
+          git clone https://github.com/Mivik/arceos .arceos --depth=1 || true
 
           ./scripts/set_ax_root.sh .arceos
 
