@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Mivik/starry-next
-          ref: 8fdfa897bb6cd2e01b28c5381fca1cb0f0a87b5e
+          ref: 113ea71c621c70188f2c3f5c9ed08ad42bd41a84
           path: starry-next
       - name: Run testcases
         run: |
