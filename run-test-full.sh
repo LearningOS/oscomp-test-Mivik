@@ -1,6 +1,8 @@
 #!/bin/bash
 script_dir=$(dirname "$0")
 
+export ACCEL=n
+
 rm /tmp/output.txt || true
 
 echo 'Running riscv64'
