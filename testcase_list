@@ -6,7 +6,8 @@
 # /musl/busybox ln -s libc.so /lib/ld-musl-riscv64.so.1
 # /musl/busybox ln -s libc.so /lib/ld-musl-aarch64.so.1
 # /musl/busybox ln -s libc.so /lib/ld-musl-x86_64.so.1
-# /musl/busybox ln -s libc.so /lib/ld-musl-loongarch-lp64d.so.1
+# /musl/busybox mkdir /lib64
+# /musl/busybox cp /musl/libc.so /lib64/ld-musl-loongarch-lp64d.so.1
 
 # /musl/busybox cp -r /lib /lib64
 
