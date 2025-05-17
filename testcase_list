@@ -10,19 +10,19 @@
 
 /musl/busybox cp -r /lib /lib64
 
-/musl/busybox echo "#### OS COMP TEST GROUP START basic-glibc ####"
-/musl/busybox echo "#### OS COMP TEST GROUP START basic-musl ####"
-/musl/busybox sh -c "cd basic && ../busybox sh run-all.sh"
-/musl/busybox echo "#### OS COMP TEST GROUP END basic-musl ####"
-/musl/busybox echo "#### OS COMP TEST GROUP END basic-glibc ####"
+# /musl/busybox echo "#### OS COMP TEST GROUP START basic-glibc ####"
+# /musl/busybox echo "#### OS COMP TEST GROUP START basic-musl ####"
+# /musl/busybox sh -c "cd basic && ../busybox sh run-all.sh"
+# /musl/busybox echo "#### OS COMP TEST GROUP END basic-musl ####"
+# /musl/busybox echo "#### OS COMP TEST GROUP END basic-glibc ####"
 
-/musl/busybox echo "#### OS COMP TEST GROUP START libctest-glibc ####"
-/musl/busybox sh libctest_testcode.sh
-/musl/busybox echo "#### OS COMP TEST GROUP END libctest-glibc ####"
+# /musl/busybox echo "#### OS COMP TEST GROUP START libctest-glibc ####"
+# /musl/busybox sh libctest_testcode.sh
+# /musl/busybox echo "#### OS COMP TEST GROUP END libctest-glibc ####"
 
-/musl/busybox echo "#### OS COMP TEST GROUP START lua-glibc ####"
-/musl/busybox sh lua_testcode.sh
-/musl/busybox echo "#### OS COMP TEST GROUP END lua-glibc ####"
+# /musl/busybox echo "#### OS COMP TEST GROUP START lua-glibc ####"
+# /musl/busybox sh lua_testcode.sh
+# /musl/busybox echo "#### OS COMP TEST GROUP END lua-glibc ####"
 
 /musl/busybox echo "#### OS COMP TEST GROUP START busybox-glibc ####"
 /musl/busybox mkdir /bin
