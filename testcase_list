@@ -1,14 +1,14 @@
-/musl/busybox mkdir /lib
+# /musl/busybox mkdir /lib
 
-/musl/busybox ln -s /musl/lib/libc.so /lib/libc.so
-/musl/busybox sh -c "/musl/busybox cp /musl/*.so /lib/"
+# /musl/busybox ln -s /musl/lib/libc.so /lib/libc.so
+# /musl/busybox sh -c "/musl/busybox cp /musl/*.so /lib/"
 
-/musl/busybox ln -s libc.so /lib/ld-musl-riscv64.so.1
-/musl/busybox ln -s libc.so /lib/ld-musl-aarch64.so.1
-/musl/busybox ln -s libc.so /lib/ld-musl-x86_64.so.1
-/musl/busybox ln -s libc.so /lib/ld-musl-loongarch-lp64d.so.1
+# /musl/busybox ln -s libc.so /lib/ld-musl-riscv64.so.1
+# /musl/busybox ln -s libc.so /lib/ld-musl-aarch64.so.1
+# /musl/busybox ln -s libc.so /lib/ld-musl-x86_64.so.1
+# /musl/busybox ln -s libc.so /lib/ld-musl-loongarch-lp64d.so.1
 
-/musl/busybox cp -r /lib /lib64
+# /musl/busybox cp -r /lib /lib64
 
 /musl/busybox echo "#### OS COMP TEST GROUP START basic-glibc ####"
 /musl/busybox echo "#### OS COMP TEST GROUP START basic-musl ####"
