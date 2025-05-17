@@ -72,7 +72,7 @@ jobs:
           echo 'end---aarch64' >> output.txt
 
           echo 'start---loongarch64' >> output.txt
-          make ARCH=loongarch64 oscomp_run LOG=debug >> output.txt || true
+          make ARCH=loongarch64 oscomp_run LOG=error >> output.txt || true
           echo 'end---loongarch64' >> output.txt
 
           echo 'start---x86_64' >> output.txt
