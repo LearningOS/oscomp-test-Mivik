@@ -63,11 +63,21 @@ jobs:
 
           ./scripts/set_ax_root.sh .arceos
 
+          echo 'start---riscv64' >> output.txt
+          make ARCH=riscv64 oscomp_run >> output.txt || true
+          echo 'end---riscv64' >> output.txt
+
+          echo 'start---aarch64' >> output.txt
+          make ARCH=aarch64 oscomp_run >> output.txt || true
+          echo 'end---aarch64' >> output.txt
 
           echo 'start---loongarch64' >> output.txt
           make ARCH=loongarch64 oscomp_run LOG=debug >> output.txt || true
           echo 'end---loongarch64' >> output.txt
 
+          echo 'start---x86_64' >> output.txt
+          make ARCH=x86_64 ACCEL=n oscomp_run >> output.txt || true
+          echo 'end---x86_64' >> output.txt
 
           cat output.txt
           mv output.txt ../output.txt
