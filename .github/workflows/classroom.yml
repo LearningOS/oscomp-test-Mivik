@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Mivik/starry-next
-          ref: c5671a7b78601dabb175ae438329107c766e6386
+          ref: 50d883295c3de98bb76fc8434061fd97a46530fa
           path: starry-next
       - name: Run testcases
         run: |
@@ -86,6 +86,7 @@ jobs:
       - name: Download EvaluationScript
         run: |
           git clone ${{ env.SCRIPT_REPO }} .github/classroom
+          git -C .github/classroom apply $(realpath eval.patch)
 
       - name: glibcbasic-test
         uses: oscontent25/os-autograding@master
