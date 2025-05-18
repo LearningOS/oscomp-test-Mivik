@@ -1,4 +1,4 @@
-# /musl/busybox mkdir /lib
+/musl/busybox mkdir /lib
 
 # /musl/busybox ln -s /musl/lib/libc.so /lib/libc.so
 # /musl/busybox sh -c "/musl/busybox cp /musl/*.so /lib/"
@@ -33,8 +33,9 @@
 /musl/busybox sh busybox_testcode.sh
 /musl/busybox echo "#### OS COMP TEST GROUP END busybox-glibc ####"
 
-# /musl/busybox echo "#### OS COMP TEST GROUP START iozone-glibc ####"
-# /musl/busybox sh iozone_testcode.sh
-# /musl/busybox echo "#### OS COMP TEST GROUP END iozone-glibc ####"
+/musl/busybox echo "#### OS COMP TEST GROUP START iozone-glibc ####"
+/musl/busybox sed -i -e 's/.\/iozone/.\/iozone -T/g' /musl/iozone_testcode.sh
+/musl/busybox sh /musl/iozone_testcode.sh
+/musl/busybox echo "#### OS COMP TEST GROUP END iozone-glibc ####"
 
 # /musl/busybox hwclock
