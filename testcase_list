@@ -1,7 +1,7 @@
-/musl/busybox mkdir /lib
+# /musl/busybox mkdir /lib
 
 # /musl/busybox ln -s /musl/lib/libc.so /lib/libc.so
-/musl/busybox sh -c "/musl/busybox cp /musl/*.so /lib/"
+# /musl/busybox sh -c "/musl/busybox cp /musl/*.so /lib/"
 
 # /musl/busybox ln -s libc.so /lib/ld-musl-riscv64.so.1
 # /musl/busybox ln -s libc.so /lib/ld-musl-aarch64.so.1
