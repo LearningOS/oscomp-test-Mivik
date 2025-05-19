@@ -86,7 +86,6 @@ jobs:
       - name: Download EvaluationScript
         run: |
           git clone ${{ env.SCRIPT_REPO }} .github/classroom
-          git -C .github/classroom apply $(realpath eval.patch)
 
       - name: glibcbasic-test
         uses: oscontent25/os-autograding@master
