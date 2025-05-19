@@ -27,7 +27,6 @@
 # /musl/busybox echo "#### OS COMP TEST GROUP END lua-glibc ####"
 
 /musl/busybox echo "#### OS COMP TEST GROUP START iozone-glibc ####"
-/musl/busybox sed -i -e 's/.\/iozone/.\/iozone -T/g' /musl/iozone_testcode.sh
 /musl/busybox sh /musl/iozone_testcode.sh
 /musl/busybox echo "#### OS COMP TEST GROUP END iozone-glibc ####"
 
