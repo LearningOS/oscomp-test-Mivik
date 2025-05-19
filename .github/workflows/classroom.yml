@@ -60,7 +60,7 @@ jobs:
 
           echo "Cloning repositories ..." || true
           git clone https://github.com/Mivik/arceos -b fs2-test .arceos || true
-          git -C .arceos reset --hard b4cc5022b25ef28fb957bda031b37cf7819650c2
+          git -C .arceos reset --hard eeb9b18a6877173f554c033cc3dc9fe6f83d294c
 
           ./scripts/set_ax_root.sh .arceos
 
