@@ -26,16 +26,16 @@
 /musl/busybox sh lua_testcode.sh
 /musl/busybox echo "#### OS COMP TEST GROUP END lua-glibc ####"
 
+/musl/busybox echo "#### OS COMP TEST GROUP START iozone-glibc ####"
+/musl/busybox sed -i -e 's/.\/iozone/.\/iozone -T/g' /musl/iozone_testcode.sh
+/musl/busybox sh /musl/iozone_testcode.sh
+/musl/busybox echo "#### OS COMP TEST GROUP END iozone-glibc ####"
+
 /musl/busybox echo "#### OS COMP TEST GROUP START busybox-glibc ####"
 /musl/busybox mkdir /bin
 /musl/busybox ln -s /musl/busybox /bin/ls
 /musl/busybox ln -s /musl/busybox /bin/sleep
 /musl/busybox sh busybox_testcode.sh
 /musl/busybox echo "#### OS COMP TEST GROUP END busybox-glibc ####"
-
-/musl/busybox echo "#### OS COMP TEST GROUP START iozone-glibc ####"
-/musl/busybox sed -i -e 's/.\/iozone/.\/iozone -T/g' /musl/iozone_testcode.sh
-/musl/busybox sh /musl/iozone_testcode.sh
-/musl/busybox echo "#### OS COMP TEST GROUP END iozone-glibc ####"
 
 # /musl/busybox hwclock
