@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Mivik/starry-next
-          ref: 27c2a94434e5528e9ed4032f413ea6c5d8dda31f
+          ref: 4556c19b817168bbed66e12f4f44df6e3513d0b8
           path: starry-next
       - name: Run testcases
         run: |
@@ -60,7 +60,7 @@ jobs:
 
           echo "Cloning repositories ..." || true
           git clone https://github.com/Mivik/arceos -b fs2-test .arceos || true
-          git -C .arceos reset --hard 02d7f4818698080fe599243f7173b6d294f95ffa
+          git -C .arceos reset --hard c2e96c85fa6cfcbc7d6ef55225b20197567e50a7
 
           ./scripts/set_ax_root.sh .arceos
 
